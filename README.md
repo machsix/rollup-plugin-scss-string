@@ -1,1 +1,1 @@
-Compile scss files and load as an string
+Compile scss files and load as a string
