@@ -1,3 +1,4 @@
+const { dirname } = require('path')
 import { createFilter } from 'rollup-pluginutils'
 import sass from 'node-sass'
 
@@ -8,14 +9,13 @@ export default function string(opts = {}) {
   
   const filter = createFilter(opts.include, opts.exclude);
 
-  console.log(opts)
   return {
     name: 'string',
 
     transform(code, id) {
       if (filter(id)) {
         const rendered = sass.renderSync({
-          data: code
+          file: id,
         })
 
         return {
