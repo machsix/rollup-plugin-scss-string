@@ -1,4 +1,3 @@
-const { dirname } = require('path')
 import { createFilter } from 'rollup-pluginutils'
 import sass from 'node-sass'
 
