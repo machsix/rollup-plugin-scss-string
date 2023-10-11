@@ -13,7 +13,7 @@ export default function string(opts = {}) {
 
     transform(code, id) {
       if (filter(id)) {
-        const rendered = sass.compile({
+        const rendered = sass.renderSync({
           file: id,
         })
 

@@ -1,9 +1,10 @@
 {
   "name": "rollup-plugin-scss-string",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Compile scss files and load as a string",
-  "main": "dist/index.js",
+  "main": "index.js",
   "author": "Dima Pavlovsky",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c"

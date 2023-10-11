@@ -1,11 +1,9 @@
 import buble from 'rollup-plugin-buble';
 
-const pkg = require('./package.json');
-
 export default {
-  entry: 'index.js',
+  input: 'index.js',
   output: {
-    file: pkg['main'],
+    file: 'dist/index.js',
     format: 'cjs',
     sourcemap: 'inline',
     name: 'injector'
