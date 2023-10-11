@@ -1,11 +1,11 @@
 import { createFilter } from 'rollup-pluginutils'
-import sass from 'node-sass'
+import sass from 'sass'
 
 export default function string(opts = {}) {
   if (!opts.include) {
     throw Error('include option should be specified');
   }
-  
+
   const filter = createFilter(opts.include, opts.exclude);
 
   return {
@@ -13,7 +13,7 @@ export default function string(opts = {}) {
 
     transform(code, id) {
       if (filter(id)) {
-        const rendered = sass.renderSync({
+        const rendered = sass.compile({
           file: id,
         })
 
