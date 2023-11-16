@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-scss-string",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Compile scss files and load as a string",
   "main": "index.js",
   "author": "Dima Pavlovsky",
@@ -15,11 +15,11 @@
   "repository": "https://github.com/dimapaloskin/rollup-plugin-scss-string",
   "dependencies": {
     "rollup-pluginutils": "^2.8.2",
-    "sass": "^1.69.2"
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "buble": "^0.20.0",
-    "rollup": "^4.0.2",
+    "rollup": "^4.4.1",
     "rollup-plugin-buble": "^0.19.2"
   }
 }

@@ -1,5 +1,5 @@
 import { createFilter } from 'rollup-pluginutils'
-import sass from 'sass'
+import * as sass from 'sass'
 
 export default function string(opts = {}) {
   if (!opts.include) {
@@ -13,9 +13,7 @@ export default function string(opts = {}) {
 
     transform(code, id) {
       if (filter(id)) {
-        const rendered = sass.renderSync({
-          file: id,
-        })
+        const rendered = sass.compile(id);
 
         return {
           code: `export default ${JSON.stringify(rendered.css.toString())};`,
